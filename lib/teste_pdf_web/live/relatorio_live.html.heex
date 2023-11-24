@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        h1 {
+            font-weight: bolder;
+            font-size: xx-large;
+        }
+        h2 {
+            font-weight: bolder;
+            font-size: x-large;
+        }
+        h3 {
+            background-color: red;
+            color: white;
+        }
+        p {
+            text-indent: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Relatório Mensal</h1>
+    <section>
+        <h2>Seção 1</h2>
+        <div>
+            <h3>1.1 - Ação de Planejamento </h3>
+            <p><%= @primeira_secao.acao_planejamento %></p>
+        </div>
+        <div>
+            <h3>1.2 - Participacao em grupos de estudo </h3>
+            <p><%= @primeira_secao.participacao_grupos_estudo %></p>
+        </div>
+        <div>
+            <h3>1.3 - Ações de pesquisa </h3>
+            <p><%= @primeira_secao.acoes_pesquisa %></p>
+        </div>
+        <div>
+            <h3>1.4 - Participacao de treinamentos </h3>
+            <p><%= @primeira_secao.participacao_treinamentos %></p>
+        </div>
+        <div>
+            <h3>1.5 - Publicacao </h3>
+            <p><%= @primeira_secao.publicacao %></p>
+        </div>
+    </section>
+</body>
+</html>
