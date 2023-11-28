@@ -1,8 +1,7 @@
 defmodule TestePdf.PdfGenerator do
 
   def gerar_pdf() do
-
-    template = TestePdfWeb.RelatorioLive.render(%{
+    relatorio = %{
       primeira_secao: %{
         acao_planejamento: "Realização de workshops sobre metodologias de pesquisa",
         participacao_grupos_estudo: "Participação ativa em dois grupos de estudo",
@@ -16,7 +15,8 @@ defmodule TestePdf.PdfGenerator do
         previsao_participacao_treinamentos: "Planejamento para participar de treinamentos futuros",
         previsao_acoes_pesquisa: "Planejamento para iniciar nova pesquisa"
       }
-    })
+    }
+    template = TestePdfWeb.RelatorioHTML.relatorio(relatorio)
     |> Phoenix.HTML.Safe.to_iodata()
     |> IO.iodata_to_binary();
 

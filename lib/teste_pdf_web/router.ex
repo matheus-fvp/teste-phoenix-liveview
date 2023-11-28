@@ -22,7 +22,7 @@ defmodule TestePdfWeb.Router do
     scope "/relatorios" do
       live "/", ListRelatoriosLive
       live "/relatorio", RelatorioLive
-      get "/download-pdf", RelatorioDownloadController, :download_pdf
+      get "/:id/download-pdf", RelatorioController, :download_pdf
     end
   end
 

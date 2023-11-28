@@ -1,7 +1,8 @@
-defmodule TestePdfWeb.RelatorioDownloadController do
+defmodule TestePdfWeb.RelatorioController do
   use TestePdfWeb, :controller
 
-  def download_pdf(conn, _params) do
+  def download_pdf(conn, params) do
+    IO.inspect params
     pdf_binary = TestePdf.PdfGenerator.gerar_pdf()
      conn
        |> put_resp_content_type("application/pdf; charset=utf-8")
