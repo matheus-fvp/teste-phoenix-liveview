@@ -16,7 +16,8 @@ defmodule TestePdf.Application do
       # Start a worker by calling: TestePdf.Worker.start_link(arg)
       # {TestePdf.Worker, arg},
       # Start to serve requests, typically the last entry
-      TestePdfWeb.Endpoint
+      TestePdfWeb.Endpoint,
+      ChromicPDF
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

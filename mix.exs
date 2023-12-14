@@ -48,7 +48,8 @@ defmodule TestePdf.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:plug_cowboy, "~> 2.5"},
-      {:pdf_generator, ">=0.6.0" }
+      {:pdf_generator, ">=0.6.0"},
+      {:chromic_pdf, "~> 1.14"}
     ]
   end
 

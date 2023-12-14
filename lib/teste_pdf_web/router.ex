@@ -18,7 +18,7 @@ defmodule TestePdfWeb.Router do
     pipe_through :browser
 
     # get "/", PageController, :home
-    live "/", PageLive, :show
+    live "/", PageLive
     scope "/relatorios" do
       live "/", ListRelatoriosLive
       live "/relatorio", RelatorioLive

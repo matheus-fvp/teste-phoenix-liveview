@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <style>
+
+        * {
+            margin: 0;
+        }
+        html, body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16pt;
+        }
+
+        p {
+            word-wrap: break-word;
+            white-space: pre-line;
+            margin: 0;
+        }
+
+        .pagina {
+            height: 35.7cm;
+            width: 26cm;
+            text-align: center;
+            page-break-after: always;
+            position: relative;
+        }
+
+        .capa {
+            background-image: none;
+        }
+
+        .pagina-capa-img1 {
+            width: 50%;
+        }
+
+        .pagina-capa-c1 {
+            font-size: 24pt;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .pagina-capa-c2 {
+            font-weight: 700;
+        }
+
+        .pagina-capa-c3 {
+            margin-top: 4cm;
+            margin-bottom: 0.5cm;
+            font-weight: 600;
+        }
+
+        .pagina-capa-c4 {
+            margin-bottom: 1cm;
+            text-align: justify;
+        }
+
+        .pagina-capa-c7 {
+            font-weight: bold;
+        }
+
+        .pagina-capa-c8 {
+            margin-top: 10cm;
+            font-weight: bold;
+            position: absolute;
+            bottom: 0;
+            left: 11cm;
+        }
+
+        .sumario-c1 {
+            background-color: rgba(128, 128, 128, 0.507);
+        }
+
+        .sumario-c2, .content-c2 {
+            margin-top: 1.5cm;
+            text-align: justify;
+        }
+
+        .sumario-c2 li {
+            padding: 5px;
+        }
+
+        .sumario-c2 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .content {
+            break-inside: avoid-page;
+        }
+
+        .content-c2{
+            margin-top: 0;
+        }
+
+        .content-c3 {
+            margin: 1cm 0;
+            page-break-inside: avoid;
+        }
+
+        .content-c3 h4 {
+            margin: 0.5cm 0;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="pagina capa">
+        <img class="pagina-capa-img1" src="https://raw.githubusercontent.com/peapescarte/pescarte-plataforma/c220bca828f4555c3c67774bd0f219d8316f1c0a/apps/plataforma_digital/priv/static/images/pescarte_logo.svg" alt="pescarte-logo">
+        <h1 class="pagina-capa-c1">Relatório (ANUAL)</h1>
+        <p class="pagina-capa-c2">3° Fase</p>
+
+        <p class="pagina-capa-c3">LINHA DE PESQUISA:</p>
+        <p class="pagina-capa-c4">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+
+        <p class="pagina-capa-c7"> XXXXXXXXXXXXXXXXXXXXXXXXXX <br>Pesquisador(a)</p>
+        <p class="pagina-capa-c8">Cidade<br>MÊS/ANO</p>
+    </section>
+
+    <section class="pagina">
+
+        <h2 class="sumario-c1">Sumário</h2>
+
+        <ol class="sumario-c2">
+            <li><a href="#sumario-001">Plano de Trabalho</a></li>
+            <li><a href="#sumario-002">Resumo</a></li>
+            <li><a href="#sumario-003">Introdução</a></li>
+            <li><a href="#sumario-004">Fundamentação Teórica</a></li>
+            <li><a href="#sumario-005">Resultados alcançados</a></li>
+            <li><a href="#sumario-006">Atividades acadêmicas relacionadas ao PEA Pescarte</a></li>
+            <li><a href="#sumario-007">Atividades não acadêmicas relacionadas ao PEA Pescarte</a></li>
+            <li><a href="#sumario-008">Conclusões ou considerações finais</a></li>
+            <li><a href="#sumario-009">REFERÊNCIAS BIBLIOGRÁFICAS</a></li>
+        </ol>
+
+    </section>
+
+    <section class="pagina content">
+
+        <ol class="content-c2">
+            <li class="content-c3"><h4 id="sumario-001">Plano de Trabalho</h4>
+                <p><%= @plano_de_trabalho %></p>
+            </li>
+            <li class="content-c3">
+                <h4 id="sumario-002">Resumo</h4>
+                <p><%= @resumo %></p>
+            </li>
+            <li class="content-c3">
+                <h4 id="sumario-003">Introdução</h4>
+                <p><%= @introducao %></p>
+            </li>
+            <li class="content-c3">
+                <h4 id="sumario-004">Fundamentação Teórica</h4>
+                <p><%= @embasamento_teorico %></p>
+            </li>
+            <li class="content-c3">
+                <h4 id="sumario-005">Resultados alcançados</h4>
+                <p><%= @resultados %></p>
+            </li>
+            <li class="content-c3">
+                <h4 id="sumario-006">Atividades acadêmicas relacionadas ao PEA Pescarte</h4>
+                <p><%= @atividades_academicas %></p>
+            </li>
+            <li class="content-c3">
+                <h4 id="sumario-007">Atividades não acadêmicas relacionadas ao PEA Pescarte</h4>
+                <p><%= @atividades_nao_academicas %></p>
+            </li>
+            <li class="content-c3">
+                <h4 id="sumario-008">Conclusões ou considerações finais</h4>
+                <p style="page-break-inside: avoid;"><%= @conclusao %></p>
+            </li>
+            <li class="content-c3">
+                <h4 id="sumario-009">REFERÊNCIAS BIBLIOGRÁFICAS</h4>
+                <p><%= @referencias %></p>
+            </li>
+        </ol>
+    </section>
+</body>
+</html>
